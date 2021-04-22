@@ -41,7 +41,7 @@
             <h1>Listado de Pacientes</h1>
             </div>
         </div>
-    <table class="table table-hover">
+    <table class="table table-hover border">
        <tr>
         <th>DNI</th>
         <th>NOMBRE Y APELLIDO</th>

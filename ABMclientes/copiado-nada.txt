@@ -1,0 +1,8 @@
+if ($_FILES["archivo"]["error"] === UPLOAD_ERR_OK) {
+        $nombre = date("Ymdhmsi"); //2021010420453710
+        $archivo_tmp = $_FILES["archivo"]["tmp_name"];
+        $nombreArchivo = $_FILES["archivo"]["name"];
+        $extension = pathinfo($nombreArchivo, PATHINFO_EXTENSION);
+        $nuevoNombre = "$nombre.$extension";
+        move_uploaded_file($archivo_tmp, $nuevoNombre);
+    }
