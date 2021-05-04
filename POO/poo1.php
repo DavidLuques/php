@@ -39,6 +39,14 @@ class alumno extends persona {
         $this->notaphp = 0.0;
         $this->notaproyecto = 0.0;      }
 
+    public function __get($propiedad){
+        return $this->$propiedad;
+    }
+
+    public function __set($propiedad, $valor){
+         $this->$propiedad=$valor;
+    }
+
     public function imprimir(){
         echo "nombre =" . $this->nombre . "<br>";
         echo "edad =" . $this->edad . "<br>";
@@ -86,19 +94,19 @@ class alumno extends persona {
     $alumno1->setnombre("ana");
     $alumno1->setedad (23);
     $alumno1->setnacionalidad("paraguaya");
-    $alumno1->setnotaphp( 9);
-    $alumno1->setnotaportfolio(8);
-    $alumno1->setnotaproyecto (9);
+    $alumno1->notaphp = 9;
+    $alumno1->notaportfolio = 8;
+    $alumno1->notaproyecto = 9;
     $alumno1->imprimir();
 
     $alumno2 = new alumno();
     $alumno2->nombre = "mati";
     $alumno2->dni = "12321312";
-    $alumno2->notaphp = "10";
+    $alumno2->notaphp = 10;
     $alumno2->imprimir();
 
     $docente1 = new docente();
-    $docente1->nombre = "david ledesma";
+    $docente1->setnombre ("david ledesma");
     $docente1->especialidad = docente::ESPECIALIDAD_ECO;
     $docente1->imprimir();
     $docente1->imprimirespecialidadeshabilitadas();
