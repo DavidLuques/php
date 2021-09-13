@@ -16,6 +16,7 @@ class Persona {
         $this->celular = $celular;
     }
 
+    //seters and getters 
     public function __get($propiedad) {
         return $this->$propiedad;
     }
@@ -30,7 +31,8 @@ class Entrenador extends Persona{
     
     private $aClases;
 
-    public function __construct($dni, $nombre, $correo, $celular) {
+    public function __construct($dni, $nombre, $correo, $celular)
+    {
         parent::__construct($dni, $nombre, $correo, $celular);
         $this->aClases = array();
     }
@@ -53,7 +55,8 @@ class Alumno extends Persona {
     private $bAptoFisico;
     private $presentismo;
 
-    public function __construct($dni, $nombre, $correo, $celular, $fechaNac) {
+    public function __construct($dni, $nombre, $correo, $celular, $fechaNac)
+    {
         parent::__construct($dni, $nombre, $correo, $celular);
         $this->fechaNac = $fechaNac;
         $this->peso = 0.0;
@@ -62,7 +65,8 @@ class Alumno extends Persona {
         $this->presentismo = 0.0;
     }
 
-    public function __get($propiedad) {
+    public function __get($propiedad)
+    {
         return $this->$propiedad;
     }
 
@@ -124,16 +128,16 @@ $alumno1 = new Alumno("40787657", "Dante Montera", "dante@mail.com", "1145632457
 $alumno1->setFichaMedica(90, 178, true);
 $alumno1->presentismo = 78;
 
-$alumno2 = new Alumno("46766547", "Darío Turchi", "dario@mail.com", "1145632457", "1986-11-21");
+$alumno2 = new Alumno("46766547", "Darío Turchi", "dario@mail.com", "1122222222", "1986-11-21");
 $alumno2->setFichaMedica(73, 1.68, false);
 $alumno2->presentismo = 68;
 
 
-$alumno3 = new Alumno("39765454", "Facundo Fagnano", "facundo@mail.com", "1145632457", "1993-02-06");
+$alumno3 = new Alumno("39765454", "Facundo Fagnano", "facundo@mail.com", "113333333", "1993-02-06");
 $alumno3->setFichaMedica(90, 1.87, true);
 $alumno3->presentismo = 88;
 
-$alumno4 = new Alumno("41687536", "Gastón Aguilar", "gaston@mail.com", "1145632457", "1999-11-02");
+$alumno4 = new Alumno("41687536", "Gastón Aguilar", "gaston@mail.com", "1144444444", "1999-11-02");
 $alumno4->setFichaMedica(70, 1.69, false);
 $alumno4->presentismo = 98;
 
