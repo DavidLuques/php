@@ -143,7 +143,7 @@ if (isset ($_GET["id"]) &&  $_GET["id"] != "" && isset ($_GET["do"]) && $_GET["d
                         <th>DNI</th>
                         <th>Nombre</th>
                         <th>Correo</th>
-                        <th>Acciones</th>
+                        <th>Accioness</th>
                     </tr>
                     <tr>
                         <?php foreach ($aClientes as $Cliente){?>
